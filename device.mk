@@ -279,6 +279,10 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     $(LOCAL_PATH)/overlay/packages/apps/Snap \
     $(LOCAL_PATH)/overlay/frameworks/base/packages/SystemUI
 
+# Overlays
+PRODUCT_PACKAGES += \
+    NoCutoutOverlay
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
