@@ -56,3 +56,7 @@ persist.vendor.dolby.loglevel                   u:object_r:vendor_dolby_loglevel
 # Spectrum
 persist.spectrum.profile                      u:object_r:spectrum_prop:s0
 
+
+# Dirac
+persist.audio.dirac                           u:object_r:dirac_prop:s0
+
