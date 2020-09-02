@@ -22,3 +22,6 @@ type proc_audio_file, file_type, data_file_type, core_data_file_type;
 
 # Kcal
 type kcal_dev, sysfs_type, fs_type;
+type sysfs_kcal, fs_type, sysfs_type;
+
+
