@@ -60,7 +60,12 @@ allow system_app kcal_dev:dir search;
 allow system_app sysfs_kcal:dir search;	
 allow system_app sysfs_kcal:file rw_file_perms;
 
-# Vibrator
+# Audio Gain
+allow system_app sysfs_egain:file { open read getattr write };
+allow system_app sysfs_hgain:file { open read getattr write };
+allow system_app sysfs_mgain:file { open read getattr write };
+
+#Vibrator
 allow system_app sysfs_leds:dir { search };
 allow system_app sysfs_leds:file { write getattr open read };
 allow system_app apk_data_file:dir { write };
