@@ -139,6 +139,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1 \
     persist.dbg.wfc_avail_ovr=1 \
+    persist.vendor.radio.mt_sms_ack=30 \
     persist.dbg.ims_volte_enable=1 \
     persist.vendor.radio.data_ltd_sys_ind=1 \
     persist.vendor.radio.data_con_rprt=1
