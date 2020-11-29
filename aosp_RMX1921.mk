@@ -19,14 +19,13 @@ PRODUCT_MANUFACTURER := Realme
 PRODUCT_NAME := aosp_RMX1921
 PRODUCT_MODEL := Realme XT
 
-PRODUCT_GMS_CLIENTID_BASE := android-oppo
+PRODUCT_GMS_CLIENTID_BASE := android-realme
+
+BUILD_FINGERPRINT := "google/coral/coral:11/RP1A.201105.002/6869500:user/release-keys"
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="coral-user 11 RP1A.201105.002 6869500 release-keys" \
-    PRODUCT_NAME="RMX1921"
+        PRIVATE_BUILD_DESC="coral-user 11 RP1A.201105.002 6869500 release-keys" \
+        PRODUCT_NAME="RMX1921" \
+	TARGET_DEVICE="RMX1921"
+    
 
-# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := google/coral/coral:11/RP1A.201105.002/6869500:user/release-keys
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.fingerprint=$(BUILD_FINGERPRINT)
