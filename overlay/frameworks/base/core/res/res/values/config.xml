@@ -567,4 +567,7 @@
     <item name="proximity_sensor_secondary_threshold" translatable="false" format="float"
           type="dimen">4.99</item>
 
+    <!-- Flag indicating whether we should enable the adaptive sleep.-->
+    <bool name="config_adaptive_sleep_available">true</bool>
+
 </resources>
