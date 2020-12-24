@@ -1,0 +1,2 @@
+# wfd
+allow system_app vendor_wfd_service_prop:property_service {set};
