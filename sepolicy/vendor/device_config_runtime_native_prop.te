@@ -1,0 +1,2 @@
+allow device_config_runtime_native_prop device_config_runtime_native_prop:file { getattr  open };
+

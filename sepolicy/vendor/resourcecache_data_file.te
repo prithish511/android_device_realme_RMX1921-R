@@ -1,0 +1,2 @@
+allow resourcecache_data_file resourcecache_data_file:file { getattr  open  read };
+

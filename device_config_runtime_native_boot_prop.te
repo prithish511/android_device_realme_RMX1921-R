@@ -1,0 +1,1 @@
+allow device_config_runtime_native_boot_prop device_config_runtime_native_boot_prop:file { getattr  open };

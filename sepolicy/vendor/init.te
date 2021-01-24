@@ -1,0 +1,3 @@
+allow init init:binder { call };
+allow init init:netlink_route_socket { read };
+allow init init:socket { read };
