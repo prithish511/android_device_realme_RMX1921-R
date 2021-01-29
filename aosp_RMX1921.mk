@@ -10,6 +10,8 @@ TARGET_BOOT_ANIMATION_RES := 1080
 
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
+TARGET_INCLUDE_WIFI_EXT := true
+
 # Inherit from RMX1921 device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
