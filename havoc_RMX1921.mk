@@ -7,7 +7,7 @@
 # Inherit some common havoc stuff
 #TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 1080
-
+TARGET_INCLUDE_WIFI_EXT := true
 $(call inherit-product, vendor/havoc/config/common_full_phone.mk)
 
 # Inherit from RMX1921 device
