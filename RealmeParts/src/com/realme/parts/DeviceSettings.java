@@ -45,9 +45,6 @@ public class DeviceSettings extends PreferenceFragment implements
 
     public static final String KEY_VIBSTRENGTH = "vib_strength";
 
-    private static final String PREF_SPECTRUM = "spectrum";
-    private static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
-
     private static final String PREF_ENABLE_DIRAC = "dirac_enabled";
     private static final String PREF_HEADSET = "dirac_headset_pref";
     private static final String PREF_PRESET = "dirac_preset_pref";
@@ -65,7 +62,6 @@ public class DeviceSettings extends PreferenceFragment implements
     private VibratorStrengthPreference mVibratorStrength;
     private Preference mDozePref;
     private Preference mKcalPref;
-    private SecureSettingListPreference mSPECTRUM;
     private SecureSettingSwitchPreference mEnableDirac;
     private SecureSettingListPreference mHeadsetType;
     private SecureSettingListPreference mPreset;
@@ -81,10 +77,6 @@ public class DeviceSettings extends PreferenceFragment implements
 
         String device = FileUtils.getStringProp("ro.build.product", "unknown");
 
-        mSPECTRUM = (SecureSettingListPreference) findPreference(PREF_SPECTRUM);
-        mSPECTRUM.setValue(FileUtils.getStringProp(SPECTRUM_SYSTEM_PROPERTY, "0"));
-        mSPECTRUM.setSummary(mSPECTRUM.getEntry());
-        mSPECTRUM.setOnPreferenceChangeListener(this);
 
         mVibratorStrength = (VibratorStrengthPreference) findPreference(KEY_VIBSTRENGTH);
         if (mVibratorStrength != null) {
@@ -162,12 +154,7 @@ public class DeviceSettings extends PreferenceFragment implements
     public boolean onPreferenceChange(Preference preference, Object value) {
         final String key = preference.getKey();
         switch (key) {
-            case PREF_SPECTRUM:
-                mSPECTRUM.setValue((String) value);
-                mSPECTRUM.setSummary(mSPECTRUM.getEntry());
-                FileUtils.setStringProp(SPECTRUM_SYSTEM_PROPERTY, (String) value);
-                break;
-
+           
             case PREF_ENABLE_DIRAC:
                 try {
                     DiracService.sDiracUtils.setEnabled((boolean) value);
