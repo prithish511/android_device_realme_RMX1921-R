@@ -15,6 +15,16 @@ set_prop(hal_camera_default, vendor_camera_prop);
 
 allow hal_camera_default vendor_default_prop:property_service set;
 allow hal_camera_default proc_oppoversion:dir search;
+
 allow hal_camera_default debugfs:file { getattr open read };
 allow hal_camera_default proc_meminfo:file { getattr open read };
 allow hal_camera_default proc_oppoversion:file { open read };
+
+allow hal_camera_default persist_camera_file:dir add_name;
+allow hal_camera_default proc_meminfo:file { read open getattr };
+allow hal_camera_default default_prop:file { map getattr };
+allow hal_camera_default unlabeled:dir { search };
+allow hal_camera_default radio_prop:file { getattr };
+allow hal_camera_default default_prop:file { getattr };
+allow hal_camera_default sysfs_thermal:file w_file_perms;
+
