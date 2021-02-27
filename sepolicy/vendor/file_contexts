@@ -19,9 +19,6 @@
 /(vendor|system/vendor)/bin/hw/vendor\.oppo\.hardware\.camera\.oppoAlgoProcessService@1\.0-service u:object_r:hal_camera_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.oppo\.hardware\.mmdisplayfeature@1\.0-service               u:object_r:oppo_display_default_exec:s0
 
-# FOD Hal
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.biometrics\.fingerprint\.inscreen@1.0-service\.realme_sdm710    u:object_r:hal_lineage_fod_default_exec:s0
-
 #Rootfs files
 /bt_firmware(/.*)?                            u:object_r:bt_firmware_file:s0
 /firmware(/.*)?                               u:object_r:firmware_file:s0
@@ -33,9 +30,6 @@
 # Camera
 /mnt/vendor/persist/camera(/.*)?                                                             u:object_r:persist_camera_file:s0
 
-# Sensors
-/persist/sensors(/.*)?          u:object_r:sensors_persist_file:s0
-
 # Oppo Partitions
 /dev/block/platform/soc/1d84000.ufshc/by-name/oppodycnvbk                                                u:object_r:modem_efs_partition_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/oppostanvbk                                                u:object_r:modem_efs_partition_device:s0
@@ -45,11 +39,12 @@
 # mdmreason device
 /dev/mdmreason             u:object_r:mdmreason_device:s0
 
+# Sensors
+/persist/sensors(/.*)?          u:object_r:sensors_persist_file:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.sensors@1\.0-service\.xt                     u:object_r:hal_sensors_default_exec:s0
+
 # sysfs uio
 /sys/devices(/platform)?/soc/[a-f0-9]+.qcom,oembackup_sharedmem/uio/uio[0-9]+(/.*)?         u:object_r:sysfs_uio_file:s0
-
-# FPS Info
-/sys/class/drm/sde-crtc-0/measured_fps                              u:object_r:sysfs_fps:s0
 
 # Touch
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.RMX1921      u:object_r:hal_lineage_touch_default_exec:s0
@@ -57,13 +52,16 @@
 # Executables
 /system/bin/chargeonlymode                    u:object_r:charger_exec:s0
 
-# Kcal
-/sys/module/msm_drm/parameters(/.*)?					u:object_r:sysfs_kcal:s0
-
 # PowerHAL
 /vendor/bin/hw/android\.hardware\.power@1\.2-service-qti                u:object_r:hal_power_default_exec:s0
 
 # Proximity Sensor
 /(vendor|system/vendor)/bin/hw/android\.hardware\.sensors@1\.0-service\.realme_sdm710                     u:object_r:hal_sensors_default_exec:s0
 
+# Power
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power\.stats@1\.0-service\.mock                     u:object_r:hal_power_stats_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.thermal@2\.0-service\.qti                     u:object_r:hal_thermal_default_exec:s0
+
+# Touch 
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.xt      u:object_r:hal_lineage_touch_default_exec:s0
 

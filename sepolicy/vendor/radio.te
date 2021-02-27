@@ -7,3 +7,8 @@ allow radio { cameraserver_service mediaextractor_service mediaserver_service me
 
 binder_call(radio, cnd)
 
+allow radio self:socket { create ioctl read write };
+allow radio vendor_file:file { read open getattr execute };
+allow radio hal_cacert_hwservice:hwservice_manager find;
+allow radio qcom_ims_prop:file { read open getattr };
+
