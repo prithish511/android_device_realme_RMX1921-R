@@ -31,4 +31,4 @@ genfscon sysfs /kernel/sound_control/headphone_gain                             
 
 # Microphone gain
 genfscon sysfs /kernel/sound_control/mic_gain                                            u:object_r:sysfs_mgain:s0
-h
+
