@@ -54,3 +54,5 @@ persist.vendor.dolby.loglevel                   u:object_r:vendor_dolby_loglevel
 # Google camera hal read only props
 ro.vendor.camera.                        u:object_r:camera_ro_prop:s0
 
+# Dirac
+persist.audio.dirac                           u:object_r:dirac_prop:s0

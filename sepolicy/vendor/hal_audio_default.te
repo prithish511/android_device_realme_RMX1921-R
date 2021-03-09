@@ -18,4 +18,6 @@ allow hal_audio_default proc_audio_file:file { read };
 
 get_prop(hal_audio_default, vendor_audio_prop);
 
-
+# Dirac
+get_prop(hal_audio_default, dirac_prop)
+set_prop(hal_audio_default, dirac_prop)
