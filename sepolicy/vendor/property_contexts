@@ -56,3 +56,6 @@ ro.vendor.camera.                        u:object_r:camera_ro_prop:s0
 
 # Dirac
 persist.audio.dirac                           u:object_r:dirac_prop:s0
+
+# NFC
+persist.nfc.               u:object_r:persist_nfc_prop:s0

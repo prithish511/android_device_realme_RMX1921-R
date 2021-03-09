@@ -15,3 +15,7 @@ type vendor_dolby_loglevel_prop, property_type;
 
 # Dirac
 type dirac_prop, property_type;
+
+# NFC
+type persist_nfc_prop, property_type;
+type vendor_nfc_prop, property_type;
