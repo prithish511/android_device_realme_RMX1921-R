@@ -109,14 +109,16 @@
             android:defaultValue="4"
             android:key="headphone_gain"
             android:max="20"
-            app:min="-40"
+	    app:min="-40"
+	    android:icon="@drawable/ic_headphone"
             android:title="@string/headphone_gain" />
 
         <com.realme.parts.preferences.CustomSeekBarPreference
             android:defaultValue="0"
             android:key="microphone_gain"
             android:max="20"
-            app:min="-10"
+	    app:min="-10"
+	    android:icon="@drawable/ic_mic"
             android:title="@string/microphone_gain" />
 
         <com.realme.parts.preferences.SecureSettingCustomSeekBarPreference
