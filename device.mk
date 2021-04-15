@@ -370,7 +370,8 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh \
     init.recovery.qcom.rc \
     init.target.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    apex_metadata.rc
 
 # RCS
 PRODUCT_PACKAGES += \
