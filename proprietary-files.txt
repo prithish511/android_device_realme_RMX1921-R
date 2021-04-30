@@ -1554,6 +1554,9 @@ vendor/firmware/ufs/SKhynix-H9HQ53AECMMDAR.bin
 # WiFi
 vendor/bin/cnss-daemon
 
+# WIFI Firmware
+vendor/firmware/wlan/qca_cld/wlan_mac.bin
+
 # MotoDolbyV3
 -app/MotoDolbyV3/MotoDolbyV3.apk
 -product/priv-app/daxService/daxService.apk
