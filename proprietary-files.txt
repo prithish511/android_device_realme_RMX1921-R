@@ -426,6 +426,9 @@ vendor/lib64/libsysmon_cdsp_skel.so
 # Charger - Firmware
 vendor/firmware/fastchg/19651/oppo_vooc_fw.bin
 
+# Charger
+vendor/bin/hvdcp_opti
+
 # CNE from pnx_sprout - PNX_00WW_FIH-user-11-RKQ1.200906.002-00WW_6_100-release-keys
 -vendor/app/CneApp/CneApp.apk
 vendor/bin/cnd
