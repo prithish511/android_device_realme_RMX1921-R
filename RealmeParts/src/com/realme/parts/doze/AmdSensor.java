@@ -38,7 +38,7 @@ public class AmdSensor implements SensorEventListener {
 
     private static final String AMD_SENSOR = "qti.sensor.amd";
 
-    private static final int WAKELOCK_TIMEOUT_MS = 3000;
+    private static final int WAKELOCK_TIMEOUT_MS = 2000;
 
     private SensorManager mSensorManager;
     private Sensor mSensor;
@@ -65,7 +65,7 @@ public class AmdSensor implements SensorEventListener {
         boolean isRaiseToWake = DozeUtils.isRaiseToWakeEnabled(mContext);
         if (DEBUG) Log.d(TAG, "Got sensor event: " + event.values[0]);
 
-        if (event.values[0] == 2.0f) {
+        if (event.values[0] == 2) {
             if (isRaiseToWake) {
                 mWakeLock.acquire(WAKELOCK_TIMEOUT_MS);
                 mPowerManager.wakeUp(SystemClock.uptimeMillis(),
