@@ -4,9 +4,14 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit some common PE stuff
+# Inherit some common PixelPlusUI stuff
 TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+
+TARGET_FACE_UNLOCK_SUPPORTED = true
+CUSTOM_BUILD_TYPE=OFFICIAL
 
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
